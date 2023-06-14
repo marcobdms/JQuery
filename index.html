@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 id="hola">¡Practicas!</h1>
+
+    <div id="divmostrar">hola</div>
+
+    <input type="text" id="campoTexto" placeholder="Ingresa un texto" />
+
+    <button class="show" onclick="mostrarAlerta()">Show</button>
+
+    <p id="hide">hide this sampletext</p>
+
+    <button id="mostrar5">ejercicio 5</button>
+
+    <p id="ejercicio6">Aumenta el tamaño de este texto</p>
+
+    <br />
+    <hr />
+    <br />
+
+    <form action="">
+      <input type="text" id="uno" placeholder="Nombre" /><br /><br />
+      <input type="text" id="dos" placeholder="Apellido" /><br /><br />
+      <input type="text" id="tres" placeholder="eMail" /><br /><br />
+      <br />
+      <button onclick="enviarFormulario()">Enviar Formulario</button>
+    </form>
+
+    <span id="ejercicio8">Esta es la hora actual</span>
+
+    <script>
+
+      //8
+
+    var cambiarHora = document.getElementById('ejercicio8');
+
+    
+
+
+
+
+
+      //7
+
+    // function enviarFormulario() {
+    //   var inputUno = document.getElementById("uno").value;
+    //   var inputDos = document.getElementById("dos").value;
+    //   var inputTres = document.getElementById("tres").value;
+
+    //   if (inputUno !== "" && inputDos !== "" && inputTres !== "") {
+    //     alert("¡El formulario se ha enviado correctamente!");
+    //   } else {
+    //     alert("Error: el formulario no se pudo enviar, ¡Hay campos vacios!");
+    //   }
+    // }
+
+      //6
+
+      // var aumentar = document.getElementById("ejercicio6");
+
+      // window.addEventListener("scroll", mostrar6);
+
+      // function mostrar6() {
+      //   aumentar.style.fontSize = 'larger';
+      // }
+
+      //5
+
+      // var mostrar = document.getElementById("mostrar5");
+
+      // mostrar.addEventListener("click", mostrardiv);
+
+      // function mostrardiv() {
+      //   let elemento = document.getElementById("divmostrar");
+      //     if (elemento.style.visibility = "hidden") {
+      //       elemento.style.visibility = "visible";
+      //     } else {
+      //       elemento.style.visibility = "hidden";
+      //     }
+      // }
+
+      //1
+
+      // const cambiar = document.getElementById('hola');
+      // cambiar.textContent = "bien y tu?"
+
+      //2
+
+      // const cambiar = document.getElementsByTagName('div')[0];
+      // cambiar.style.backgroundColor = 'red';
+
+      //3
+
+      // function mostrarAlerta() {
+      //     const text = document.getElementById('campoTexto').value;
+      //     alert(text);
+
+      // }
+
+      //4
+
+      // window.addEventListener("load", ocultarP)
+
+      // function ocultarP() {
+      //     const ocultar = document.getElementById('hide');
+      //     ocultar.style.visibility = 'hidden';
+      // }
+    </script>
+  </body>
+</html>

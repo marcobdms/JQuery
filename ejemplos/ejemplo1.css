@@ -1,0 +1,50 @@
+<style>
+  #mySquare {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: all 0.5s;
+  }
+
+  .circle {
+    border-radius: 50%;
+  }
+
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid blue;
+  }
+
+  .rounded {
+    border-radius: 10px;
+  }
+</style>
+
+<div id="mySquare"></div>
+
+<script>
+  const square = document.getElementById('mySquare');
+  let shape = 1; // Variable para realizar un seguimiento de la forma actual
+
+  // Agregar un manejador de eventos para el evento de clic
+  square.addEventListener('click', function() {
+    shape++;
+    
+    // Cambiar la forma del cuadrado
+    if (shape === 1) {
+      square.style.borderRadius = '0';
+    } else if (shape === 2) {
+      square.style.borderRadius = '50%';
+    } else if (shape === 3) {
+      square.style.borderRadius = '0';
+      square.style.transform = 'rotate(45deg)';
+    } else {
+      shape = 0;
+      square.style.borderRadius = '10px';
+      square.style.transform = 'rotate(0)';
+    }
+  });
+</script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id='borrar' type="button" value="Delete event">
+    <style>
+        #mySquare {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            transition: all 0.5s;
+            margin: 0 auto;
+            position: relative;
+            top: 100px;
+
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid blue;
+        }
+
+        .rounded {
+            border-radius: 10px;
+        }
+    </style>
+
+    <div id="container"></div>
+
+    <script>
+        const container = document.getElementById('container');
+        let shape = 1; // Variable para realizar un seguimiento de la forma actual
+
+        // Crear el elemento cuadrado
+        const square = document.createElement('div');
+        square.id = 'mySquare';
+        container.appendChild(square);
+
+        // Agregar un manejador de eventos para el evento de clic
+        square.addEventListener('click', function () {
+            shape++;
+
+            // Cambiar la forma del cuadrado
+            if (shape == 1) {
+                square.style.borderRadius = '0';
+            } else if (shape == 2) {
+                square.style.borderRadius = '50%';
+            } else if (shape == 3) {
+                square.style.borderRadius = '0';
+                square.style.transform = 'rotate(45deg)';
+            } else {
+                shape = 0;
+                square.style.borderRadius = '10px';
+                square.style.transform = 'rotate(0)';
+            }
+        });
+
+        square.addEventListener('mouseover', function () {
+
+            square.style.background = 'blue';
+
+        });
+
+        square.addEventListener('mouseout', function () {
+
+            square.style.background = 'red';
+
+        });
+
+        function handleClick(event) {
+            console.log('Se elimino evento: '+event);
+        }
+
+        document.getElementById('borrar').addEventListener('click', function () {
+            square.removeEventListener('mouseover', handleClick('mouseover'));
+        })
+  
+    </script>
+  
+</body>
+
+</html>
